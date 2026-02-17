@@ -1,0 +1,21 @@
+.navlink{
+  color: var(--muted);
+  font-weight: 500;
+  position: relative;
+}
+.navlink:hover{
+  color: var(--text);
+}
+.navlink::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-8px;
+  width:0%;
+  height:2px;
+  background: var(--accent);
+  transition: width .2s ease;
+}
+.navlink:hover::after{
+  width:100%;
+}

@@ -1,0 +1,158 @@
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+  min-height: 100vh;
+
+  /* Space for fixed navbar */
+  padding-top: 130px;
+
+  display: flex;
+  align-items: center;
+
+  /* Dark + subtle pink glow */
+  background:
+    radial-gradient(circle at 70% 30%, rgba(255, 60, 90, 0.35), transparent 60%),
+    radial-gradient(circle at 20% 60%, rgba(120, 30, 50, 0.35), transparent 60%),
+    #07080c;
+}
+
+/* Layout container */
+.hero-content {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.hero-left {
+  padding-bottom: 30px;
+}
+
+.intro-text {
+  letter-spacing: 6px;
+  font-size: 12px;
+  color: rgba(242, 237, 231, 0.55);
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: clamp(52px, 6vw, 90px);
+  line-height: 0.95;
+  margin: 0;
+  font-weight: 800;
+  color: #f2ede7;
+}
+
+.name-dot {
+  color: #ff4d6d;
+}
+
+/* Gradient role text */
+.role {
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: 700;
+
+  background: linear-gradient(90deg, #FECF8C 0%, #FF9C9C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+
+
+/* ================= BUTTONS ================= */
+
+.buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 13px 24px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.25s ease;
+  border: 1px solid rgba(255, 77, 109, 0.45);
+  cursor: pointer;
+  font-size: medium;
+}
+
+.btn.projects {
+  color: #f2ede7;
+  background: transparent;
+}
+
+.btn.projects:hover {
+  background: rgba(255, 77, 109, 0.14);
+  transform: translateY(-3px);
+}
+
+.btn.contact {
+  color: #ff4d6d;
+  background: rgba(255, 77, 109, 0.08);
+}
+
+.btn.contact:hover {
+  background: rgba(255, 77, 109, 0.18);
+  transform: translateY(-3px);
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+/* Image card style */
+.img-card {
+  width: min(430px, 100%);
+  border-radius: 24px;
+  padding: 14px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65);
+}
+
+.profile-img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 20px;
+  background: #0b0c10;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 950px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .desc {
+    margin: 18px auto 0;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .profile-img {
+    height: 440px;
+  }
+}
