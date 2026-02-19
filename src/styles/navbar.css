@@ -98,17 +98,7 @@
   border-color: rgba(255, 77, 109, 0.85);
 }
 
-/* ✅ ADDED: Click / Active color */
-.navLinks a:active,
-.navLinks a:focus {
-  color: #DC586D; /* from your palette */
-}
 
-.navLinks a:active::after,
-.navLinks a:focus::after {
-  background: #DC586D;
-  width: 100%;
-}
 
 @media (max-width: 900px) {
   .navLinks {
@@ -126,4 +116,9 @@
   .navLinks a:not(.navBtn) {
     display: none;
   }
+}
+
+/* HOVER EFFECT */
+.navLinks a:hover{
+  color: #f8cf97;  /* same gradient start color */
 }

@@ -11,9 +11,10 @@ export default function Navbar() {
         <nav className="navLinks">
           <a href="#home">Home</a>
           <a href="#about">About</a>
+          <a href="#learning">Learning</a>
           <a href="#projects">Projects</a>
           <a href="#education">Education</a>
-          <a href="#learning">Learning</a>
+          
           <a href="#achievements">Achievements</a>
           <a href="#contact" >Contact</a>
         </nav>
