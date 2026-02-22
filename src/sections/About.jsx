@@ -68,15 +68,17 @@ export default function About() {
           </h2>
 
           <p className="aboutPara">
-            I enjoy building full-stack web applications that combine clean design
-            with efficient backend logic. I focus on creating structured,
-            user-friendly systems with modern UI practices.
+             I enjoy building structured, user-focused applications that combine clean design
+            with strong backend logic. Through academic and personal projects, I have developed
+            experience in full-stack development while strengthening my analytical thinking
+            and problem-solving skills.
           </p>
 
           <p className="aboutPara">
-            I have developed projects including role-based authentication systems and
-            dashboard interfaces. I am continuously improving my skills and looking for
-            opportunities to grow as a developer.
+            My long-term goal is to become a Data Scientist, and I am actively building
+            foundations in data analysis, statistics, machine learning, and algorithms to
+            support that path. I am committed to continuous learning and applying technical
+            knowledge to solve real-world problems.
           </p>
         </div>
 

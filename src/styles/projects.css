@@ -1,0 +1,496 @@
+/* ================= PROJECTS SECTION ================= */
+.projectsSection {
+  min-height: 100vh;
+  padding-top: 110px;
+  padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 70% 30%, rgba(255, 60, 90, 0.35), transparent 60%),
+    radial-gradient(circle at 20% 60%, rgba(120, 30, 50, 0.35), transparent 60%),
+    #07080c;
+}
+.projectsContainer {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+.projectsHeader {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.projectsTag {
+  letter-spacing: 6px;
+  font-size: 12px;
+  color: rgba(242, 237, 231, 0.55);
+  margin-bottom: 20px;
+  display: block;
+}
+.projectsTitle {
+  font-size: clamp(40px, 4vw, 52px);
+  font-weight: 800;
+  color: white;
+  position: relative;
+  margin: 0 0 22px;
+}
+.projectsUnderline {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: min(40%, 260px);
+  height: 4px;
+  background: linear-gradient(90deg, #FECF8C 0%, #FF9C9C 100%);
+  border-radius: 500px;
+  opacity: 0.9;
+}
+.projectsSubtitle {
+  margin-top: 18px;
+  color: rgba(242, 237, 231, 0.6);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================= GRID ================= */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 38px;
+  align-items: stretch;
+}
+@media (max-width: 950px) {
+  .projectsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .projectsGrid { grid-template-columns: 1fr; }
+}
+
+/* ================= CARD ================= */
+.projectCard {
+  position: relative;
+  border-radius: 20px;
+  padding: 22px 20px 28px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.projectCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 200, 150, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* ================= IMAGE ================= */
+.projectThumb {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.03);
+  margin-bottom: 16px;
+  display: flex; /* Center the image */
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+} 
+.projectThumb img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain; /*  not to crop */
+  padding: 12px;
+  display: block;
+  border-radius: 14px;
+}
+
+.projectThumb {
+  position: relative;
+}
+
+.projectThumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.35), transparent 60%);
+  pointer-events: none;
+}
+/* ================= TEXT ================= */
+.projectTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #D4A574;
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+.projectDesc {
+  font-size: 13px;
+  color: rgba(242, 237, 231, 0.55);
+  line-height: 1.75;
+  margin: 0 0 14px;
+  flex: 1;
+}
+
+/* ================= TECH PILLS ================= */
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.techPill {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(242, 237, 231, 0.7);
+}
+
+/* ================= CARD ACTIONS ================= */
+.cardActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+.githubBtn,
+.viewMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  padding: 9px 16px;
+  border-radius: 10px;
+  color: rgba(242, 237, 231, 0.75);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  font-family: inherit;
+}
+.githubBtn svg,
+.viewMoreBtn svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+.githubBtn {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.githubBtn:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+.viewMoreBtn {
+  border: 1px solid rgba(255, 200, 150, 0.28);
+}
+.viewMoreBtn:hover {
+  border-color: rgba(255, 200, 150, 0.6);
+  color: #fff;
+  background: rgba(255, 200, 150, 0.06);
+}
+
+/* ================= DEPLOYING SOON BADGE ================= */
+.deployBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 200, 150, 0.18);
+  color: rgba(243, 244, 248, 0.70);
+  background: rgba(255, 200, 150, 0.03);
+  cursor: default;
+  letter-spacing: 0.3px;
+  margin-top: 10px;
+  width: 100%;
+}
+.deployDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 200, 150, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.2); }
+}
+
+/* ================= BOTTOM ACCENT ================= */
+.projectAccent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #FECF8C 0%, #FF9C9C 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.projectCard:hover .projectAccent {
+  opacity: 0.55;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+/* ================= MODAL OVERLAY ================= */
+.modalOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.modalOverlay.open {
+  display: flex;
+}
+
+/* ================= MODAL BOX ================= */
+.modalBox {
+  background: #0f1014;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  width: min(780px, 100%);
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
+  animation: modalIn 0.25s ease;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modalBox::-webkit-scrollbar { width: 6px; }
+.modalBox::-webkit-scrollbar-track { background: transparent; }
+.modalBox::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+}
+
+/* ================= MODAL HEADER ================= */
+.modalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.modalTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #D4A574;
+}
+.modalDesc {
+  font-size: 14px;
+  color: rgba(242, 237, 231, 0.55);
+  line-height: 1.75;
+  margin-top: 6px;
+  max-width: 560px;
+}
+.modalClose {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(242, 237, 231, 0.6);
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 16px;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+.modalClose:hover {
+  background: rgba(255, 80, 80, 0.15);
+  border-color: rgba(255, 80, 80, 0.3);
+  color: #fff;
+}
+
+/* ================= MODAL SCREENSHOTS ================= */
+.screenshotsLabel {
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: rgba(242, 237, 231, 0.35);
+  margin-bottom: 14px;
+  display: block;
+}
+.screenshotsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+.screenshotLink{
+  display: block;
+
+}
+
+.screenshotSlot {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  color: rgba(242, 237, 231, 0.2);
+  font-size: 12px;
+  transition: border-color 0.2s;
+}
+.screenshotSlot:hover {
+  border-color: rgba(255, 200, 150, 0.25);
+}
+.screenshotSlot svg {
+  width: 28px;
+  height: 28px;
+  opacity: 0.3;
+}
+.screenshotImg {
+  width: 100%;
+  background: rgba(255,255,255,0.02);
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  height: 190px;
+}
+
+.screenshotImg:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 200, 150, 0.3);
+}
+
+
+/* ================= MODAL TECH PILLS ================= */
+.modalTechRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.projectCard.clickable {
+  cursor: pointer;
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cardActionsLeft {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cardActions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cardBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 14px;
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.cardBtn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.cardBtn:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+
+.cardBtn.primary {
+  background: rgba(255, 60, 90, 0.15);
+  border-color: rgba(255, 60, 90, 0.4);
+}
+
+.cardBtn.primary:hover {
+  background: rgba(255, 60, 90, 0.25);
+}
+.cardBtn.primary{
+  background: rgba(255, 60, 90, 0.22);
+  border-color: rgba(255, 60, 90, 0.55);
+}
+.cardBtn.primary:hover{
+  background: rgba(255, 60, 90, 0.30);
+}
+.modalDetails{
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.detailBlock{
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.detailTitle{
+  font-size: 12px;
+  letter-spacing: 4px;
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+.detailText{
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.detailList{
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
