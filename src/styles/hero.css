@@ -88,12 +88,12 @@
   font-size: medium;
 }
 
-.btn.projects {
+.btn.download {
   color: #f2ede7;
   background: transparent;
 }
 
-.btn.projects:hover {
+.btn.download:hover {
   background: rgba(255, 77, 109, 0.14);
   transform: translateY(-3px);
 }

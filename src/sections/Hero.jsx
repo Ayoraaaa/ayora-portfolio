@@ -21,7 +21,13 @@ export default function HeroSection() {
           
 
           <div className="buttons">
-            <a href="#projects" className="btn projects">View My CV</a>
+            <a 
+                href="/cv/Ayora_cv.pdf"
+                download 
+                className="btn download"
+          >
+                Download My CV
+            </a>
             <a href="#contact" className="btn contact">Contact Me</a>
           </div>
         </div>
